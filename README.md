@@ -50,6 +50,24 @@ Steps completed :-
 
 -----------------------------------------------------------------------------------------------------------------------
 
+Steps to execute the Project :- 
+
+    1. Download the code from Giithub repository 'https://github.com/SauravSuin/automation_testing.git'.
+    2. Open Visual Studio Code. Go to File --> Open folder --> Select the project folder which is downloaded from GitHub.
+    3. Once open the project folder structure displayed.
+    4. Before doing the execution you need to install all the prerequsite setup.
+    5. Once it's done open a terminal in VS code. By clicking (...) present in the top --> Clik on Terminal --> Click new terminal.
+    5. In terminal you should be there in the project root folder, if you are not in root folder then go to root folder by using CD command.
+    6. Once you are in root folder then execute below mentioned command.
+        behave -f allure_behave.formatter:AllureFormatter -o allure-results ./features
+        allure serve allure-results
+    7. Once the command executed successfully Allure report will open automatically in your browser.
+    8. In report your are able to see the test result and you should also able to expand and explore the result output.
+
+    ![alt text](image.png)
+
+-----------------------------------------------------------------------------------------------------------------------
+
 Installation of all the component :-
 
 1. Install Python :-

@@ -1,7 +1,7 @@
 from behave import given, when, then
 import requests
 from utils.api_helpers import create_booking
-from hamcrest import assert_that, equal_to, is_not, none
+from hamcrest import assert_that, equal_to, is_not, none, empty
 import json
 import allure
 
@@ -111,26 +111,26 @@ def step_impl(context):
 
 @when("I send an update request with new firstname '{new_firstname}'")
 def step_impl(context, new_firstname):
-    updated_data = context.booking_data.copy()
-    updated_data["firstname"] = new_firstname
-    context.updated_data = updated_data
+    updated_data = context.booking_data.copy()  # .copy() will create a shallow copy of 'context.booking_data'. It allows to keep the original dictionary (context.booking_data) intact while making temporary modifications in a new dictionary (updated_data).
+    updated_data["firstname"] = new_firstname   # It will assign the new firstname in the updated_data dictionary (i.e. "firstname": "Saurav",) key - value pair. 
+    context.updated_data = updated_data         # Assign the update value in 'context.updated_data' whih can be used further.
 
     headers = {
-        "Content-Type": "application/json",
-        "Cookie": f"token={context.token}"
+        "Content-Type": "application/json",     # Header
+        "Cookie": f"token={context.token}"      # Auth token generated from 'environment.py' and passed here as it is under the root folder and 'context.token' can be accessed futher in anywhere.
     }
 
-    response = requests.put(
-        f"{BASE_URL}/booking/{context.booking_id}",
-        json=updated_data,
+    response = requests.put(                           # PUT API call made
+        f"{BASE_URL}/booking/{context.booking_id}",    # We are passing bookinid in URL which is generated in Line 58 for the newely created booking.   
+        json=updated_data,                             # Pass the updated JSON having new name.
         headers=headers,
         verify=False
     )
-    context.update_response = response
-    context.update_json = response.json()
+    context.update_response = response          # Capture the PUT response having new updaetd name.
+    context.update_json = response.json()       # new upated response json store in 'context' object, which can be used further.
 
-    allure.attach(json.dumps(context.update_json, indent=2), name="Update Response", attachment_type=allure.attachment_type.JSON)
+    allure.attach(json.dumps(context.update_json, indent=2), name="Update Response", attachment_type=allure.attachment_type.JSON)   #Capture the response as JSON in Allure report.
 
 @then("the updated firstname should be '{expected_name}'")
 def step_impl(context, expected_name):
-    assert_that(context.update_json["firstname"], equal_to(expected_name))
+    assert_that(context.update_json["firstname"], equal_to(expected_name))   # # This assertion checks if the 'firstname' exists in the JSON response stored in context.update_json is equal to the inputed firstname. If the "firstname" key is equal, the assertion passes; otherwise, it fails.

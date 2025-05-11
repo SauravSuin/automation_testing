@@ -1,7 +1,7 @@
 from behave import given, when, then
 import requests
 from utils.api_helpers import create_booking
-from hamcrest import assert_that, equal_to, is_not, none
+from hamcrest import assert_that, equal_to, is_not, none, empty
 import json
 import allure
 
