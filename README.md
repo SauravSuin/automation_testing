@@ -20,21 +20,21 @@ Tech Stack used :-
 
 Project folder structure:-
 
-automation_testing/
-│
-├── features/
-│   ├── create_update_booking.feature
-│   ├── get_booking_details.feature
-│   ├── get_booking_id.feature
-│   ├── steps/
-│   │   └── create_update_booking_steps.py
-│   │   └── get_booking_details.py
-│   │   └── get_booking_id_steps.py
-│   └── environment.py
-├── utils/
-│   └── api_helpers.py
-├── requirements.txt
-├── README.md
+        automation_testing/
+        │
+        ├── features/
+        │   ├── create_update_booking.feature
+        │   ├── get_booking_details.feature
+        │   ├── get_booking_id.feature
+        │   ├── steps/
+        │   │   └── create_update_booking_steps.py
+        │   │   └── get_booking_details.py
+        │   │   └── get_booking_id_steps.py
+        │   └── environment.py
+        ├── utils/
+        │   └── api_helpers.py
+        ├── requirements.txt
+        ├── README.md
 
 -----------------------------------------------------------------------------------------------------------------------
 
