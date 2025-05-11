@@ -1,0 +1,5 @@
+behave
+requests
+allure-behave
+python-dotenv
+PyHamcrest
