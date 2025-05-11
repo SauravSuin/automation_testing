@@ -64,8 +64,6 @@ Steps to execute the Project :-
     7. Once the command executed successfully Allure report will open automatically in your browser.
     8. In report your are able to see the test result and you should also able to expand and explore the result output.
 
-    ![alt text](image.png)
-
 -----------------------------------------------------------------------------------------------------------------------
 
 Installation of all the component :-
