@@ -35,9 +35,6 @@ automation_testing/
 │   └── api_helpers.py
 ├── requirements.txt
 ├── README.md
-├── Dockerfile
-├── behave.ini
-└── .gitlab-ci.yml / azure-pipelines.yml
 
 -----------------------------------------------------------------------------------------------------------------------
 
