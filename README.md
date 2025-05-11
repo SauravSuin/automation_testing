@@ -18,6 +18,29 @@ Tech Stack used :-
 
 ===========================================================================================================================================================
 
+Project folder structure:- 
+
+automation_testing/
+│
+├── features/
+│   ├── create_update_booking.feature
+│   ├── get_booking_details.feature
+│   ├── get_booking_id.feature
+│   ├── steps/
+│   │   └── create_update_booking_steps.py
+│   │   └── get_booking_details.py
+│   │   └── get_booking_id_steps.py
+│   └── environment.py
+├── utils/
+│   └── api_helpers.py
+├── requirements.txt
+├── README.md
+├── Dockerfile
+├── behave.ini
+└── .gitlab-ci.yml / azure-pipelines.yml
+
+===========================================================================================================================================================
+
 Installation of all the component :- 
 
 1. Install Python :- 
@@ -155,7 +178,7 @@ In our scenario we are calling POST service which is used to created different b
 8. We can execute the below command in Terminald and it will run the behave test and generated & open the report in browser :- 
 
 NOTE :- Make Sure we can run this command in test 'ROOT' folder (i.e. Projects Root folder). 
-        e.g. :- C:\Users\Desktop\GIT Repo\POC\web_service_automation\testing_poc_project\restful_booker_test> 
+        e.g. :- C:\Users\Desktop\GIT Repo\automation_testing\automation_testing> 
 
         behave -f allure_behave.formatter:AllureFormatter -o allure-results ./features
         allure serve allure-results
