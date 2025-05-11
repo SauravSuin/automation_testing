@@ -2,19 +2,19 @@
 
 Tech Stack used :-
 
-1. Language: Python 3                           --> Core language use to write the step defination code.
+    1. Language: Python 3                           --> Core language use to write the step defination code.
 
-2. PIP                                          --> Package manager for Python, use to install the different python packages.
+    2. PIP                                          --> Package manager for Python, use to install the different python packages.
 
-3. Behave                                       --> BDD test framework (like Cucumber) used for Python.
+    3. Behave                                       --> BDD test framework (like Cucumber) used for Python.
 
-4. HTTP Client: requests                        --> Web services which we are targeting to Automate and test.
+    4. HTTP Client: requests                        --> Web services which we are targeting to Automate and test.
 
-5. Reporting: Allure                            --> Used to do the reporting after the automation test execution.
+    5. Reporting: Allure                            --> Used to do the reporting after the automation test execution.
 
-6. Containerization: Docker                     -->
+    6. Containerization: Docker                     -->
 
-7. CI/CD: Azure DevOps or GitLab                -->
+    7. CI/CD: Azure DevOps or GitLab                -->
 
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -40,13 +40,13 @@ Project folder structure:-
 
 Steps completed :-
 
-1. Task must be implemented using Bhave & Python programming language       --> COMPLETED
-2. Ensure the test execution report is generated.                           --> COMPLETED
-3. Utilize Scenario Outline in Cucumber to define scenarios with examples.  --> COMPLETED
-4. Dockerize the test Cases                                                 -->
-5. Execute the tests In Pipeline Azure or Gitlab                            -->
-6. Upload the completed code to GitHub along with a README file.            --> COMPLETED
-7. Share the GitHub repository link for review.                             --> COMPLETED
+    1. Task must be implemented using Bhave & Python programming language       --> COMPLETED
+    2. Ensure the test execution report is generated.                           --> COMPLETED
+    3. Utilize Scenario Outline in Cucumber to define scenarios with examples.  --> COMPLETED
+    4. Dockerize the test Cases                                                 -->
+    5. Execute the tests In Pipeline Azure or Gitlab                            -->
+    6. Upload the completed code to GitHub along with a README file.            --> COMPLETED
+    7. Share the GitHub repository link for review.                             --> COMPLETED
 
 -----------------------------------------------------------------------------------------------------------------------
 
