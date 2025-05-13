@@ -204,4 +204,13 @@ NOTE :- Make Sure we can run this command in test 'ROOT' folder (i.e. Projects R
         behave -f allure_behave.formatter:AllureFormatter -o allure-results ./features
         allure serve allure-results
 
+        OR
+
+        behave -f allure_behave.formatter:AllureFormatter -o allure-results ./features
+        allure generate allure-results -o allure-report --clean
+        allure open allure-report
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------
