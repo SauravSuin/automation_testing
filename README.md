@@ -211,12 +211,13 @@ NOTE :- Make Sure we can run this command in test 'ROOT' folder (i.e. Projects R
         allure open allure-report
 
 Explain above command :- 
+
         1. behave -f allure_behave.formatter:AllureFormatter -o allure-results ./features
             a. behave --> Runs BDD-style test cases written in .feature files.
             b. -f allure_behave.formatter:AllureFormatter --> Tells Behave to format the output as Allure-compatible results.
             c. -o allure-results --> Output the result files into the allure-results/ folder.
             d. ./features --> Specifies where .feature files are located.
-
+            
         After this runs, you’ll have raw test result files (*.json, *.txt) in the allure-results/ folder. 
         These are not human-readable yet.
 
